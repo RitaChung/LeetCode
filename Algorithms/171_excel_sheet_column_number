@@ -1,0 +1,12 @@
+class Solution(object):
+    def titleToNumber(self, s):
+        long = len(s)
+        mapping = dict(zip(string.ascii_letters, [ord(c) % 32 for c in string.ascii_letters]))
+        if long == 1:
+            return mapping[s[0]]
+        else:
+            init = 0
+            for i in range(long):
+                order = mapping[s[i]]
+                init = init + pow(26,long-(i+1))*order
+            return init
