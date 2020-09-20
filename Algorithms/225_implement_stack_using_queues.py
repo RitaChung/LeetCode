@@ -1,24 +1,24 @@
 class MyStack(object):
 
     def __init__(self):
-        self.squ = []
+        self.seq = []
         
 
     def push(self, x):
-        self.squ.append(x)
+        self.seq.append(x)
         
 
     def pop(self):
-        val = self.squ.pop()
+        val = self.seq.pop()
         return val
         
 
     def top(self):
-        return self.squ[-1]
+        return self.seq[-1]
         
 
     def empty(self):
-        return self.squ == []
+        return self.seq == []
     
 
 
